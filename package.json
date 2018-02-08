@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "ohm-js": "^0.14.0"
+  },
+  "devDependencies": {
+    "rollup-plugin-commonjs": "^8.3.0",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "rollup-plugin-uglify": "^3.0.0"
+  },
+  "scripts": {
+    "start": "npm run-script build && npm run-script test",
+    "build": "rollup --config",
+    "test": "node --experimental-modules test.mjs"
+  }
+}
