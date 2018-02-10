@@ -1,3 +1,3 @@
-import room from './build/room.js'
+import parse from './build/parse.js'
 
-console.log(room.hi())
+console.log(parse(`#id is a sentence at 50, 50`))

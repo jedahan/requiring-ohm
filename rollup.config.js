@@ -2,19 +2,21 @@ import commonjs from 'rollup-plugin-commonjs'
 import resolve from 'rollup-plugin-node-resolve'
 import json from 'rollup-plugin-json'
 import builtins from 'rollup-plugin-node-builtins'
+import globals from 'rollup-plugin-node-globals'
 
 export default {
-  input: 'room.js',
+  input: 'parse.js',
   output: {
-    file: `build/room.js`,
+    file: `build/parse.js`,
     name: 'test',
     format: 'umd',
     sourcemap: true
   },
   plugins: [
-    resolve(),
     json(),
-    commonjs(),
-    builtins()
+    globals(),
+    builtins(),
+    resolve(),
+    commonjs()
   ]
 }
